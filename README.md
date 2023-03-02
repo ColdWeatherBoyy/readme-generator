@@ -1,4 +1,6 @@
-# d
+# f
+
+  [![License](https://img.shields.io/badge/License-AGPL_v3-blue.svg)] (https://www.gnu.org/licenses/agpl-3.0)
 
   ## Description
   
@@ -15,7 +17,7 @@
   
   ## Installation
   
-  d
+  s
   
   ## Usage
   
@@ -23,15 +25,15 @@
   
   ## Credits
   
-  d
+  g
   
   ## License
   
-   
+  GNU AGPLv3
   
   ## How to Contribute
   
-  dd  
+  f  
 
   ## Tests
   

@@ -45,14 +45,13 @@ const questions = [
     message: "Select the license you are using",
     name: "license",
     choices: ["MIT", "Apache License 2.0", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "none"],
-    default: "none"
   }
   
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, "utf8", (err) => console.log(err))
+function writeToFile(fileName, answers) {
+  fs.writeFile(fileName, answers, "utf8", (err) => err ? console.log(err) : console.log('success!'))
 }
 
 // TODO: Create a function to initialize app

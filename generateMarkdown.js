@@ -17,7 +17,7 @@ function renderLicenseBadge(license) {
   } else if (license === 'none') {
     return "";
   }
-  return `[![License]](https://img.shields.io/badge/License-${badgeLinkParam})]`;
+  return `(https://img.shields.io/badge/License-${badgeLinkParam})`;
 }
 
 // TODO: Create a function that returns the license link
@@ -43,15 +43,19 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  const licenseSection = `${renderLicenseLink(license)} ${renderLicenseBadge(license)}`
+  const licenseSection = `[![License]${renderLicenseBadge(license)}] ${renderLicenseLink(license)}`
   return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   const { projecttitle, description, installation, usage, contribution, credits, test, license } = answers;
+
+  // const sectionLicense = renderLicenseSection(answers.license);
   const readmeTemplate =
   `# ${projecttitle}
+
+  ${renderLicenseSection(license)}
 
   ## Description
   
@@ -80,7 +84,7 @@ function generateMarkdown(answers) {
   
   ## License
   
-  ${renderLicenseSection(license)}
+  ${license}
   
   ## How to Contribute
   
