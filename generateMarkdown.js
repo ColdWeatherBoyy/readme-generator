@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function that does an if/else to check which type of license was selected and generate the link to its relevant image 
 function renderLicenseBadge(license) {
   let badgeLinkParam = '';
   if (license === "MIT") {
@@ -20,8 +19,7 @@ function renderLicenseBadge(license) {
   return `(https://img.shields.io/badge/License-${badgeLinkParam})`;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Similar as above, function to check which license was selected to provide the relevant link to its resources
 function renderLicenseLink(license) {
   if (license === "MIT") {
     return `(https://opensource.org/licenses/MIT)`;
@@ -40,18 +38,18 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// combination of above two functions for markdown link syntax
 function renderLicenseSection(license) {
   const licenseSection = `[![License]${renderLicenseBadge(license)}]${renderLicenseLink(license)}`
   return licenseSection;
 }
 
-// TODO: Create a function to generate markdown for README
+// function that defines the text needed in the readme file being created
 function generateMarkdown(answers) {
+  // destructuring of the answers from the inquirer function for easier access
   const { projecttitle, description, installation, usage, contribution, credits, test, license, githubLink, githubUsername, emailAddress, howToReach } = answers;
 
-  // const sectionLicense = renderLicenseSection(answers.license);
+  // variable defined by the text of the future ReadMe File using destructured variables to fill in content as needed. Can't comment within due to template literals – but also includes call to the function that creates the License badge section
   const readmeTemplate =
   `# ${projecttitle}
 
@@ -104,10 +102,11 @@ function generateMarkdown(answers) {
   But this is how it's best to reach me: ${howToReach}
   `
   ;
+  // return statement so that this function returns the text needed in the writeFile function in our other JS page
   return readmeTemplate;
 }
 
 
 
-
+// export of generateMarkdown to allow access in other JS module.
 module.exports = generateMarkdown;

@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Require statements for inquirer, fs, as well as my second JS module
 const { prompt } = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./generateMarkdown')
 
-// TODO: Create an array of questions for user input
+// An array of questions needed for inquirer
 const questions = [
   {
     type: "input",
@@ -69,14 +69,16 @@ const questions = [
   
 ];
 
-// TODO: Create a function to write README file
+// This function takes two arguments – the name of the file to be created and the data to use to make the file
 function writeToFile(fileName, answers) {
+  // utilizing the fs method writeFile to create a file given parameters above
   fs.writeFile(fileName, answers, "utf8", (err) => err ? console.log(err) : console.log('success!'))
 }
 
-// TODO: Create a function to initialize app
+// Initialization function declaration which uses inquirer to prompt and its .then method to take its answers as an argument for writeToFile above.
 function init() {
   prompt(questions)
+  // generateMarkdown is defined in a separate JS file, required at the top of the page, and is used to generate the content needed for writeToFile to work
     .then((answers) => writeToFile("README_Created.md", generateMarkdown(answers)))
 }
 
