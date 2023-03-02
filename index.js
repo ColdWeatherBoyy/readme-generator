@@ -77,7 +77,7 @@ function writeToFile(fileName, answers) {
 // TODO: Create a function to initialize app
 function init() {
   prompt(questions)
-    .then((answers) => writeToFile("README.md", generateMarkdown(answers)))
+    .then((answers) => writeToFile("README_Created.md", generateMarkdown(answers)))
 }
 
 // Function call to initialize app
