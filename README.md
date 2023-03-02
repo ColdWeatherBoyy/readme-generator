@@ -1,10 +1,10 @@
-# f
+# sdf
 
-  [![License](https://img.shields.io/badge/License-AGPL_v3-blue.svg)] (https://www.gnu.org/licenses/agpl-3.0)
+  [![License](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
   ## Description
   
-  d
+  sdf
   
   ## Table of Contents
   
@@ -14,27 +14,39 @@
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
+  - [How To Contribute](#contribute)
+  - [Tests](#tests)
+  - [Questions](#questions)
   
   ## Installation
   
-  s
+  asdf
   
   ## Usage
   
-  d
+  asdf
   
   ## Credits
   
-  g
+  as
   
   ## License
   
-  GNU AGPLv3
+  This application is covered under the following license: GNU AGPLv3
   
   ## How to Contribute
   
-  f  
+  asdf  
 
   ## Tests
   
-  d
+  f
+  
+  ## Questions
+  
+  You can view my gitHub here: [fd](fd)
+
+  This is my email: s
+
+  But this is how it's best to reach me: d
+  

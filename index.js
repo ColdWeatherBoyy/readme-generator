@@ -12,7 +12,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide a detailed description of your project, please",
+    message: "Provide a detailed description of your project, please.",
     name: "description"
   },
   {
@@ -42,10 +42,30 @@ const questions = [
   },
   {
     type: "list",
-    message: "Select the license you are using",
+    message: "Select the license you are using:",
     name: "license",
     choices: ["MIT", "Apache License 2.0", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "none"],
-  }
+  },
+  {
+    type: "input",
+    message: "What is your gitHub username?",
+    name: "githubUsername"
+  },
+  {
+    type: "input",
+    message: "What is your gitHub link?",
+    name: "githubLink"
+  },
+  {
+    type: "input",
+    message: "What is your email?",
+    name: "emailAddress"
+  },
+  {
+    type: "input",
+    message: "What's the best way to reach you?",
+    name: "howToReach"
+  },
   
 ];
 

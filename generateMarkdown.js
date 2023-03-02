@@ -43,13 +43,13 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  const licenseSection = `[![License]${renderLicenseBadge(license)}] ${renderLicenseLink(license)}`
+  const licenseSection = `[![License]${renderLicenseBadge(license)}]${renderLicenseLink(license)}`
   return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  const { projecttitle, description, installation, usage, contribution, credits, test, license } = answers;
+  const { projecttitle, description, installation, usage, contribution, credits, test, license, githubLink, githubUsername, emailAddress, howToReach } = answers;
 
   // const sectionLicense = renderLicenseSection(answers.license);
   const readmeTemplate =
@@ -69,6 +69,9 @@ function generateMarkdown(answers) {
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
+  - [How To Contribute](#contribute)
+  - [Tests](#tests)
+  - [Questions](#questions)
   
   ## Installation
   
@@ -84,7 +87,7 @@ function generateMarkdown(answers) {
   
   ## License
   
-  ${license}
+  This application is covered under the following license: ${license}
   
   ## How to Contribute
   
@@ -92,7 +95,17 @@ function generateMarkdown(answers) {
 
   ## Tests
   
-  ${test}`;
+  ${test}
+  
+  ## Questions
+  
+  You can view my gitHub here: [${githubUsername}](${githubLink})
+
+  This is my email: ${emailAddress}
+
+  But this is how it's best to reach me: ${howToReach}
+  `
+  ;
   return readmeTemplate;
 }
 
